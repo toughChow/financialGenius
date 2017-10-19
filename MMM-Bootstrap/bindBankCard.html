@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>理财精灵</title>
+<link href="images/logo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    body {
+        background-color: #F3F3F3;
+    }
+
+    #myCarousel {
+        margin-top: -19px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">理财精灵</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="home.html">首页<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">理财<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="buySource.html">续存</a></li>
+                            <li><a href="buySource.html">安心理财</a></li>
+                            <li><a href="buySource.html">安心计划</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">转让专区</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="myPanel.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的账户<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="myPanel.html">账户中心</a></li>
+                            <li><a href="recharge.html">充值</a></li>
+                            <li><a href="withdraw.html">提现</a></li>
+                            <li><a href="showSource.html">我的投资</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">安全退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div style="margin: 0 200px 10px 200px;">
+        <h5>您当前位置:<a href="myPanel.html">我的账户</a>&gt;<a href="#">绑定银行卡</a></h5></div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="row">
+                <div class="col-md-2">
+                    <ul class="nav nav-pills nav-stacked left-menu" style="background-color: #222;height: 650px;">
+                        <li><a href="myPanel.html"><span class="glyphicon glyphicon-home">&nbsp;账户总览</span></a></li>
+                        <li><a href="recharge.html">充值</a></li>
+                        <li><a href="withdraw.html">提现</a></li>
+                        <li class="myLists"><a href="#">安全中心&nbsp;<span class="glyphicon glyphicon-th-list"></span></a>
+                            <ul class="nav" style="background-color: #000;display: none">
+                                <li><a href="loginPassword-edit.html">修改登陆密码</a></li>
+                                <li><a href="payPassword-edit.html">修改支付密码</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="personalData.html">个人资料</a></li>
+                        <li class="myLists"><a href="#">我的投资&nbsp;<span class="glyphicon glyphicon-th-list"></span></a>
+                            <ul class="nav" style="background-color: #000;display: none">
+                                <li><a href="showSource.html">查看持有投资项目</a></li>
+                                <li></li>
+                                <li><a href="buySource.html">添加投资项目</a></li>
+                                <li><a href="transferSource.html">转让投资项目</a></li>
+                            </ul>
+                        </li>
+                        <li class="myLists"><a href="#">信息统计&nbsp;<span class="glyphicon glyphicon-th-list"></span></a>
+                            <ul class="nav" style="background-color: #000;display: none">
+                                <li><a href="showSource.html">投资记录</a></li>
+                                <li><a href="showWithdraw.html">提现记录</a></li>
+                                <li><a href="showRecharge.html">充值记录</a></li>
+                            </ul>
+                        </li>
+                        <li class="myLists"><a href="#">我的银行卡&nbsp;<span class="glyphicon glyphicon-th-list"></span></a>
+                            <ul class="nav" style="background-color: #000;display: none">
+                                <li><a href="bindBankCard.html">添加银行卡</a></li>
+                                <li><a href="unbindBankCard.html">删除银行卡</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 架子分隔符 -->
+                <div class="col-md-10">
+                    <div style="margin: 20px 0 10px 0;">
+                        <p style="margin:10px 0 0 20px; color: rgb(212, 106, 64);">
+                            <span class="glyphicon glyphicon-star">&nbsp;银行卡处理</span>
+                        </p>
+                        <hr>
+                    </div>
+                    <!-- 输入框 -->
+                    <div class="container" style="width: 600px; margin-left: 50px;">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-2 control-label">姓名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入银行卡所属人姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">选择银行</label>
+                                <div class="col-sm-10">
+                                    <select id="name" class="form-control">
+                                        <option>银行1</option>
+                                        <option>银行2</option>
+                                        <option>银行3</option>
+                                        <option>银行4</option>
+                                        <option>银行5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-2 control-label">银行卡</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入银行卡号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-2 control-label">支付密码</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="lastname" placeholder="请输入支付密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal">绑定</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="container center-block">
+        <div class="row navbar-bottom">
+            <div class="col-md-12 text-center">
+                <p>Copyright © 2017 理财精灵 股东公司：理财精灵 版权所有
+                </p>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>地址：遵义市新浦新区软件园</p>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>网贷有风险 投资需谨慎 最终收益以实际为准</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        // 自动轮播
+        $("#myCarousel").carousel('cycle');
+        // 鼠标悬浮 停止
+        $('.item').hover(function() {
+            $("#myCarousel").carousel('pause');
+        });
+
+        //zuo边菜单 active
+        $(".left-menu > li").hover(function() {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+
+        // 切换子菜单
+        $(".myLists").hover(function() {
+            $(this).children('.nav').toggle();
+        });
+    });
+    </script>
+</body>
+
+</html>

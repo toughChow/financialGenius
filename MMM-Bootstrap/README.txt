@@ -1,0 +1,20 @@
+# 各页面指向
+bindBankCard.html		绑定银行卡
+buySource.html			购买资源
+buySource-final.html	购买资源输入页面
+holdSource.html			查看持有资源
+home.html				主页
+index.html				登陆后主页
+loginPassword-edit.html 更改登录密码
+myPanel.html			我的账户主页面
+payPassword-edit.html	更改支付密码
+personalData.thml		个人信息
+personalData-edit.html	更改个人信息
+recharge.html			充值
+showRecharge.html		查看充值记录
+showResource.html		查看已购项目
+showWithdraw.html		查看提现记录
+transferSource.html		转移资源
+transferSource-final.html转移资源输入页面
+unbindBankCard.html  	解绑银行卡
+withdraw.html 			提现

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>理财精灵</title>
+    <link href="images/logo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    body {
+        background-color: #F3F3F3;
+    }
+
+    #myCarousel {
+        margin-top: -19px;
+    }
+
+    .form-horizontal {
+        margin-top: 100px;
+    }
+
+    .bottom {
+        margin-top: 20px;
+    }
+
+    .panel-myPanel {
+        margin-top: 50px;
+    }
+
+    .panel-loginForm {
+        position: absolute;
+        left: 750px;
+        top: -350px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">理财精灵</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling  -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a>欢迎登陆<span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 图片 -->
+    <img src="images/home.jpg" class="img-responsive" style="margin-top: -19px;">
+    <!-- 测试 -->
+    <div class="container container-myForm">
+        <div class="row">
+            <div class="col-md-5">
+                <!-- 登陆表 -->
+                <div class="panel panel-default panel-myPanel panel-loginForm">
+                    <div class="panel-heading">登陆理财精灵</div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="col-md-1">
+                                    <span class="glyphicon glyphicon-user"></span></div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" name="username" placeholder="用户名/邮箱/手机号码">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <div class="col-md-1">
+                                    <span class="glyphicon glyphicon-lock">
+                                   </span></div>
+                                <div class="col-md-11">
+                                    <input type="password" class="form-control" name="password" placeholder="密码">
+                                </div>
+                            </div>
+                            <a href="#">
+                            <img src="images/get-btn2.jpg" style="margin:20px 25px 20px 20px;">
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default panel-myPanel">
+                    <!-- 注册 -->
+                    <div class="panel-body">
+                        <img src="images/give.png" style="margin:-10px 0 0 -10px;">
+                        <img src="images/experience.png" style="margin:-85px 0 0 65px;">
+                        <img src="images/welfare-pic.png" style="margin:40px 0 0 20px;">
+                        <a href="#"><img src="images/get-btn.png" style="margin:45px 20px 30px 10px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <!-- 登陆 -->
+                <div class="panel panel-default panel-myPanel">
+                    <div class="panel-body">
+                        <img src="images/only.png" style="margin:-10px 0 0 -10px;">
+                        <img src="images/welfare.png" style="margin:-85px 0 0 65px;">
+                        <img src="images/pc_12.png" style="margin:40px 0 0 20px;">
+                        <a href="home.html"><img src="images/get-btn2.png" style="margin:45px 20px 30px 10px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="container center-block bottom">
+        <div class="row navbar-bottom">
+            <div class="col-md-12 text-center">
+                <p>Copyright © 2017 理财精灵 股东公司：理财精灵 版权所有
+                </p>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>地址：遵义市新浦新区软件园</p>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>网贷有风险 投资需谨慎 最终收益以实际为准</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
