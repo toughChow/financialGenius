@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="admin/js/main.js"></script>
+<script type="text/javascript" src="admin/js/timer.js"></script>
 <link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css"
 	href="admin/css/font-awesome.min.css" />
@@ -22,7 +23,7 @@
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i>account</a>
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i>${username }</a>
 			</div>
 		</div>
 
@@ -64,7 +65,7 @@
 		<div class="right">
 			<div class="right-head">
 				<div class="head-left">当前位置：角色管理</div>
-				<div class="head-right">今天是2017年10月17日 星期二</div>
+				<div class="head-right"><b id="mytimer"></b></div>
 			</div>
 			<div class="head-bottom">
 				<div class="query">

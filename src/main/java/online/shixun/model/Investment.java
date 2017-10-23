@@ -21,8 +21,8 @@ public class Investment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String investName;
-	private int investCount;
-	private String description;
+	private int investCount;//投資金額
+	private String description;//描述
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "t_user_invest", joinColumns = { @JoinColumn(name = "investment_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "user_id") })
