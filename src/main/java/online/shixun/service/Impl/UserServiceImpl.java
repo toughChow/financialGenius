@@ -33,4 +33,13 @@ public class UserServiceImpl implements UserService{
 		userDao.updateUser(user);
 	}
 
+	public void addUser(User user) {
+		user.setStatus("激活");
+		userDao.addUser(user);
+	}
+
+	public User getUserById(Long id) {
+		return userDao.getUserById(id);
+	}
+
 }

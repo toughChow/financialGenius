@@ -26,7 +26,7 @@ public class AdminAction extends ActionSupport implements ModelDriven<Admin>,Ses
 	public String adminLogin() {
 		boolean flag = adminService.login(admin);
 		if (flag) {
-			session.put("userID", admin.getId());
+			session.put("username", admin.getUsername());
 			return SUCCESS;
 		} else
 			return "login";

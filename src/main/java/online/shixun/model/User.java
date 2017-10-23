@@ -26,8 +26,8 @@ public class User {
 	private String password;
 	private String sex;
 	private String email;
-	private int count;
-	private String status;
+	private int count;// 账户余额
+	private String status;// 账户状态 分为 '激活'和'冻结' 两种状态
 	private String payPassword;
 	@ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
 	@JoinColumn(name = "role_id")
@@ -52,6 +52,10 @@ public class User {
 	public User(Long id) {
 		super();
 		this.id = id;
+	}
+
+	public User() {
+		super();
 	}
 
 	public User(String userName, String password, String sex, String email, int count, String status,
