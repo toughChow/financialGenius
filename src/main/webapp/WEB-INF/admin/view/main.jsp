@@ -7,6 +7,7 @@
 <title>HOME</title>
 	<script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="admin/js/main.js"></script>
+	<script type="text/javascript" src="admin/js/timer.js"></script>
 	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css"/>
 	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="admin/css/main.css">
