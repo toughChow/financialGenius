@@ -22,5 +22,12 @@
     		<result name="list">/WEB-INF/admin/view/manageUser.jsp</result>
     		<result name="singleUser">/WEB-INF/admin/view/updateUser.jsp</result>
     	</action>
+    	<action name="roleAction_*" class="roleAction" method="{1}">
+    		<result name="save">/WEB-INF/admin/view/main.jsp</result>
+    		<result name="list">/WEB-INF/admin/view/manageRole.jsp</result>
+    		<result name="update">/WEB-INF/admin/view/manageRole.jsp</result>
+    		<result name="delete">/WEB-INF/admin/view/manageRole.jsp</result>
+    		<result name="toUpdate">/WEB-INF/admin/view/updateRole.jsp</result>
+    	</action>
     </package>
 </struts>

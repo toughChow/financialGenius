@@ -1,32 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>usermanage</title>
-<script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="admin/js/main.js"></script>
-<script type="text/javascript" src="admin/js/timer.js"></script>
-<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css"
-	href="admin/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="admin/css/main.css">
-<link rel="stylesheet" type="text/css" href="admin/css/usermanage.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="admin/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="admin/css/main.css">
+	<link rel="stylesheet" type="text/css" href="admin/css/useradd.css">
 </head>
 <body>
 	<div class="main">
 		<div class="head">
-			<div class="head1">ADMIN</div>
+			<div class="head1">
+				ADMIN
+			</div>
 			<div class="head2">
-				<input type="text" name="text" value="search..." id="input1"><a
-					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
-				<a href="">设置</a>&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i>${username }</a>
+				<input type="text" name="text" value="search..." id="input1"><a href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="">设置</a>&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa fa-user fa-2x fa-fw"></i>account</a>
 			</div>
 		</div>
-
+		
 		<div class="left">
 			<li id="li5"><a href="admin_view_main"><i
 					class="fa fa fa-envira fa-fw"></i></a>&nbsp;HOME</li>
@@ -64,48 +61,32 @@
 		</div>
 		<div class="right">
 			<div class="right-head">
-				<div class="head-left">当前位置：用户管理</div>
+				<div class="head-left">
+					当前位置：添加角色
+				</div>
 				<div class="head-right">
-					<b id="mytimer"></b>
+					今天是2017年10月17日 星期二
 				</div>
 			</div>
 			<div class="head-bottom">
 				<div class="query">
 					<div class="head-left">
-						<a href=""><i class="fa fa-list"></i></a>&nbsp;&nbsp;user table
+						<a href=""><i class="fa fa-list"></i></a>&nbsp;&nbsp;role add
 					</div>
-
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="form">
+					<form action="roleAction_saveRole" method="post" name="form" onsubmit="return register()">
+						<p><a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="roleName" id="name" placeholder="请输入角色名！" class="input"></p>
+						<p><a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="permission" id="password" placeholder="请输入角色权限！" class="input"></p>
+						<p><a href=""><i class="fa fa-envelope-o fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="description" id="againpass" placeholder="请输入角色描述！" class="input"></p>
+						<p><input type="submit" name="submit" value="确定" id="submit"><input type="reset" name="reset" id="reset" value="重置"></p>
+					</form>
 				</div>
 			</div>
-			<table>
-				<thead>
-					<th>用户名</th>
-					<th>性别</th>
-					<th>email</th>
-					<th>狀態</th>
-					<th colspan="2">操作</th>
-				</thead>
-				<c:forEach items="${list }" var="user">
-					<tr>
-						<td>${user.userName }</td>
-						<td>${user.sex }</td>
-						<td>${user.email }</td>
-						<td>${user.status }</td>
-						<td><button
-								style="background-color: #628B4D; border: 0; border-radius: 10%;">
-								<a href="userAction_getUserById?user.id=${user.id }"><i
-									class="fa fa-pencil"></i>
-							</button></td>
-						<td><button
-								style="background-color: #A65445; border: 0; border-radius: 10%;">
-								<a href="userAction_deleteUser?user.id=${user.id }"><i
-									class="fa fa-times"></i>
-							</button></td>
-					</tr>
-				</c:forEach>
-			</table>
 		</div>
 	</div>
-
 </body>
 </html>

@@ -62,6 +62,7 @@
 			<tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/>
 			<tx:method name="get*" read-only="false" propagation="NOT_SUPPORTED"/>
+			<tx:method name="save*" read-only="false" propagation="NOT_SUPPORTED"/>
 		</tx:attributes>
 	</tx:advice>
 	
