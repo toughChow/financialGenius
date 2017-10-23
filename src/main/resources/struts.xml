@@ -22,5 +22,11 @@
     		<result name="list">/WEB-INF/admin/view/manageUser.jsp</result>
     		<result name="singleUser">/WEB-INF/admin/view/updateUser.jsp</result>
     	</action>
+    	
+    	<action name="investmentAction_*" class="investmentAction" method="{1}">
+    		<result name="getLists" type="redirect">investmentAction_findInvestments</result>
+    		<result name="success">/WEB-INF/admin/view/manageFinancing.jsp</result>
+    		<result name="jumpToUpdate">/WEB-INF/admin/view/updateFinancing.jsp</result>
+    	</action>
     </package>
 </struts>
