@@ -1,0 +1,129 @@
+		body{
+			/*margin:0;*/
+			/*padding: 0;*/
+			background-color: #413841;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			font-size: 14px;
+			color: white;
+		}
+		.main{
+			margin:0 auto;
+			width: 80%;
+			height: 640px;
+			background:linear-gradient(90deg,#392D43,#865735);
+		}
+		.head{
+			
+			height: 70px;
+			line-height: 70px;
+			font-size: 20px;
+			color: white;
+			background:linear-gradient(90deg,#392D43,#865735);
+			border-bottom:1px solid grey;
+		}
+		.head1{
+			margin-left: 50px;
+			float: left;
+		}
+		.head2{
+			margin-left: 60%;
+		}
+		#input1{
+			background-color: #5E413C;
+			/*opacity: 0.3;*/
+			border: 1px solid grey;
+			height: 25px;
+		}
+		.left{
+			width: 19%;
+			height: 570px;
+			border-right: 1px solid grey;
+			background:linear-gradient(90deg,#483649,#4B3740);
+			float: left;
+		
+		}
+		.query{
+			display: block;
+		}
+		.right-head{
+			width: 100%;
+			height: 50px;
+			/*background-color: cyan;*/
+			line-height: 50px;
+			color: #6A99C7;
+		}
+		.head-left{
+			margin-left: 16px;
+			color: white;
+			float: left;
+		}
+		.head-right{
+			margin-left: 60%;
+			
+		}
+		li {
+	        height: 55px;
+	        font-size: 18px;
+	        line-height: 55px;
+	        padding-left: 20px;
+	        color: white;
+	        border-bottom: 1px solid grey;
+	    }
+
+	    #li1:hover {
+	        
+	        background-color: #2E2632;
+	    }
+
+	    #li2:hover {
+	        
+	        background-color: #2E2632;
+	    }
+
+	    #li3:hover {
+	       
+	        background-color: #2E2632;
+	    }
+
+	    #li4:hover {
+	       
+	        background-color: #2E2632;
+	    }
+	    #li5:hover {
+	       
+	        background-color: #2E2632;
+	    }
+		.li2-li{
+			padding-left: 30px;
+	        font-size: 0.8em;
+	        display: none;
+	        background-color: #2E2632;
+	    }
+	    .li3-li{
+	    	padding-left: 30px;
+	        font-size: 0.8em;
+	        display: none;
+	        background-color: #2E2632;
+	    }
+	    .li1-li{
+	    	padding-left: 30px;
+	        font-size: 0.8em;
+	        display: none;
+	        background-color: #2E2632;
+	    }
+	    .li4-li{
+	    	padding-left: 30px;
+	        font-size: 0.8em;
+	        display: none;
+	        background-color: #2E2632;
+	    }
+
+		.right{
+			height: 570px;
+			background:linear-gradient(90deg,#392D43,#865735);
+		}

@@ -1,0 +1,44 @@
+		.right-head{
+			width: 100%;
+			height: 50px;
+			/*background-color: cyan;*/
+			line-height: 50px;
+			color: #6A99C7;
+		}
+		.head-left{
+			margin-left: 16px;
+			color: white;
+			float: left;
+		}
+		.head-right{
+			margin-left: 60%;
+			
+		}
+		.head-right1{
+			margin-left: 70%;
+			
+		}
+		.head-bottom{
+			width: 99%;
+			height: 50px;
+			font-size: 16px;
+			line-height: 50px;
+			margin-left: 5px;
+			/*margin-left: 10px;*/
+			/*background-color: ;*/
+			/*border:1px solid #E6E6E6;*/
+		}
+		.right table{
+			text-align: center;
+			color: white;
+			font-size: 14px;
+			width: 78%;
+			margin-left: 16px;
+			float: left;
+		}
+		.right thead{
+			color: white;
+		}
+		td{
+			height: 30px;
+		}

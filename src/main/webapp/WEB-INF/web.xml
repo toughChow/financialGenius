@@ -10,7 +10,7 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext-*</param-value>
+		<param-value>classpath:applicationContext*</param-value>
 	</context-param>
 
 	<filter>

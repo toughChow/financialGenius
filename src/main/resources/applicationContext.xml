@@ -12,11 +12,19 @@
 	<!-- 自动扫描 -->
 	<context:component-scan base-package="online.shixun" />
 	
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:db.properties</value>
+			</list>
+		</property>
+	</bean>
+	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="username" value="root" />
-		<property name="password" value="root" />
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/financial_genius" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
 	</bean>
 	
 	<!-- hibernate -->
@@ -59,13 +67,15 @@
 	
 	<!-- 事务的切面 -->
 	<aop:config>
-		<aop:pointcut id="txPointcut" expression="execution(* online.shixun.service.impl.*.*(..))" />
+		<aop:pointcut id="txPointcut" expression="execution(* online.shixun.service.Impl.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
 	</aop:config>
+	
 	
 	<!-- 引入spring提供的hibernate模板
 	 -->
 	<bean id="baseDao" class="online.shixun.dao.BaseDao">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 </beans>

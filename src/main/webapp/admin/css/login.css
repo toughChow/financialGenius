@@ -1,0 +1,110 @@
+		*{margin:0;padding: 0}
+    body{
+      background:linear-gradient(90deg,#4D3E59,#B9794B,#59779B);
+    }
+		ul,li{list-style: none;}
+		.main {
+      color: white;
+			width: 800px;
+			height: 400px;
+			border: 1px solid grey;
+			margin:100px auto;
+			border-radius: 2%;
+			background:linear-gradient(90deg,#6D4F3A,#706044);
+      opacity: 0.6;
+			
+		}	
+		.left {
+			width: 260px;
+			height: 245px;
+			margin-left: 70px;
+			margin-top: 70px;
+			/*border:1px solid cyan;*/
+			float: left;
+      
+		}
+		.left img{
+		}
+		.right {
+			width:450px;
+			height: 390px;
+			margin-left: 340px;
+      
+			/*border: 1px solid red;*/
+		}
+		.right-top {
+      
+			width: 448px;
+			height: 90px;
+
+			/*border: 1px solid pink;*/
+		}
+		.img1 {
+     
+			width: 65px;
+			height: 64px;
+			float: left;
+		}
+		.img1 img{
+      
+			width: 65px;
+			height: 64px;
+			margin-left: 90px;
+			margin-top: 30px;
+			/*border: 1px solid cyan;*/
+			float: left;
+		}
+		.text {
+			width: 200px;
+			height: 64px;
+			margin-left: 180px;
+			font-size: 26px;
+			font-family: "宋体";
+			font-weight: bold;
+			padding-top: 50px;
+			padding-left: 20px;
+			
+		}
+		.right-middle {
+      
+			width: 448px;
+			height: 300px;
+		}
+		li{
+			margin-left: 80px;
+			margin-top: 40px;
+		}
+		#name{
+	        background-color: #5E413C;
+	      
+	        border: 1px solid grey;
+			width: 230px;
+			height: 30px;
+		}
+		#password {
+            background-color: #5E413C;
+    
+            border: 1px solid grey;
+			width: 230px;
+			height: 30px;
+		}
+		#submit {
+			margin-right: 33px;
+			width: 80px;
+			height: 30px;
+       		border:0;
+      		background-color: #669098;
+		}
+		#reset {
+      		border:0;
+			margin-right: 33px;
+			width: 80px;
+			height: 30px;
+      		background-color: #759651;
+		}
+		#register {
+      		border:0;
+			width: 80px;
+			height: 30px;
+      		background-color: #BB614B;
+		}

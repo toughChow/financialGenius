@@ -1,0 +1,49 @@
+.text{
+	width: 150px;
+	height: 65px;
+	font-size: 26px;
+	
+	float: left;
+	line-height: 65px;
+	margin-left: 63px;
+}
+p{
+	margin-left: 150px;
+	margin-top: 20px;
+}
+.input{
+	background-color: #5E413C;
+	      
+	border: 1px solid grey;
+	width: 300px;
+	height: 28px;
+}
+form{
+	margin-left: 250px;
+}
+
+#rad{
+	width: 20px;
+	height: 15px;
+}
+select{
+	background-color: #5E413C;
+	      
+	border: 1px solid grey;
+	width: 300px;
+	height: 25px;
+}
+#submit{
+	border:0;
+    background-color: #759651;
+	width: 70px;
+	height: 25px;
+	margin-left: 115px;
+}
+#reset{
+	border:0;
+    background-color: #BB614B;
+	width: 70px;
+	height: 25px;
+	margin-left: 30px;
+}
