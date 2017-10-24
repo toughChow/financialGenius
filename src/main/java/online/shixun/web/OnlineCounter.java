@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSessionListener;
  *
  */
 public class OnlineCounter extends HttpServlet implements HttpSessionListener {
-	 
+	
 
 	private static final long serialVersionUID = 1L;
 	private static int sessionCounter = 1;
