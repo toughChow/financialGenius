@@ -41,6 +41,12 @@ public class Admin {
 		super();
 	}
 
+	public Admin(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+
 	public Admin(Long id, String username, String password, Set<Resource> resources) {
 		super();
 		this.id = id;

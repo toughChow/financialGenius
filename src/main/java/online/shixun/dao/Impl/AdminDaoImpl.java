@@ -3,9 +3,6 @@ package online.shixun.dao.Impl;
 import java.io.Serializable;
 import java.util.List;
 
-import org.hibernate.Criteria;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,12 +15,11 @@ public class AdminDaoImpl implements AdminDao {
 
 	@Autowired
 	private BaseDao baseDao;
-
 	@Override
-	public Admin getAdminByUserAndPassword(Admin admin) {
+	public List<Admin> getAdminByUserAndPassword(Admin admin) {
 		List<Admin> list = (List<Admin>) baseDao.getHibernateTemplate().findByExample(admin);
-		if (list != null) {
-			return admin;
+		if (list.size()>0) {
+			return list;
 		} else
 			return null;
 	}

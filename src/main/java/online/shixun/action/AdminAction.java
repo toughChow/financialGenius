@@ -1,5 +1,6 @@
 package online.shixun.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -10,22 +11,33 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 import online.shixun.model.Admin;
-import online.shixun.service.AdminService;
+import online.shixun.service.Impl.AdminServiceImpl;
 
 @Component
 public class AdminAction extends ActionSupport implements ModelDriven<Admin>,SessionAware {
 
 	private static final long serialVersionUID = 1L;
 	
-	private Admin admin;
+	private Admin admin = new Admin();
+	
 	@Autowired
-	private AdminService adminService;
+	private AdminServiceImpl adminService;
 
 	private Map<String,Object> session;
+	private List<Admin> list;
+
+	public List<Admin> getList() {
+		return list;
+	}
+
+	public void setList(List<Admin> list) {
+		this.list = list;
+	}
 
 	public String adminLogin() {
+		System.out.println(admin.getUsername()+admin.getPassword());
 		boolean flag = adminService.login(admin);
-		if (flag) {
+		if (flag==true) {
 			session.put("username", admin.getUsername());
 			return SUCCESS;
 		} else

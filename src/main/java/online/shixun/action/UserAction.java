@@ -84,4 +84,12 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		return "singleUser";
 	}
 	
+	/**
+	 * 找到所有user列表
+	 * @return
+	 */
+	public String showUsersStatus(){
+		list=userServiceImpl.findUsers();
+		return "showStatus";
+	}
 }

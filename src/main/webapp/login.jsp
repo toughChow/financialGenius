@@ -26,12 +26,10 @@
 			<div class="right-middle">
 				<form action="adminAction_adminLogin" method="post" name="form"
 					onsubmit="return login()">
-					<li><a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;<input
-						type="text" name="admin.username" id="name" required="required"
-						placeholder="your username"></li>
-					<li><a href=""><i class="fa fa-lock fa-fw"></i></a>&nbsp;&nbsp;<input
-						type="password" name="admin.password" id="password"
-						placeholder="your password"></li>
+					<li><a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;
+					<input type="text" name="username" id="name" required="required" placeholder="your username"></li>
+					<li><a href=""><i class="fa fa-lock fa-fw"></i></a>&nbsp;&nbsp;
+					<input type="password" name="password" id="password" required="required" placeholder="your password"></li>
 					<li><label><input type="checkbox">&nbsp;remember
 							me</label></li>
 					<li><input type="submit" name="submit" id="submit" value="登录">

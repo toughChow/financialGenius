@@ -54,7 +54,7 @@
 					class="fa fa fa-bar-chart fa fa-fw"></i></a>&nbsp;message</li>
 			<li class="li4-li"><a href="" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;在线人数统计</a></li>
-			<li class="li4-li"><a href="" id="a"><i
+			<li class="li4-li"><a href="userAction_showUsersStatus" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;用户状态统计</a></li>
 		</div>
 		<div class="right">
