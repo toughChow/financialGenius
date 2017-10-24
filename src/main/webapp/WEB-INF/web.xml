@@ -8,8 +8,9 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- 监听在线人数 -->
 	<listener>
-		<listener-class>online.shixun.web.OnlineCounter</listener-class>
+		<listener-class>online.shixun.web.listener.OnlineCounter</listener-class>
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -27,10 +28,6 @@
 		<dispatcher>REQUEST</dispatcher>
 	</filter-mapping>
 	
-	<!-- 监听在线人数 -->
-	<listener>
-		<listener-class>online.shixun.web.OnlineCounter</listener-class>
-	</listener>
 	<session-config>
 		<!-- 默认过期时间为十分钟 -->
 		<session-timeout>10</session-timeout>
