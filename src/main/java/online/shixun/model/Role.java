@@ -21,7 +21,7 @@ public class Role {
 	private Long id;
 	private String roleName;
 	private String permission;
-
+	private String description;
 	public String getPermission() {
 		return permission;
 	}
@@ -30,7 +30,7 @@ public class Role {
 		this.permission = permission;
 	}
 
-	private String description;
+	
 	@OneToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JoinColumn(name = "role_id")
 	private Set<User> users = new HashSet<User>();

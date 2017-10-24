@@ -48,11 +48,11 @@
 				id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新投资项目</a></li>
 			<li id="li3"><a href=""><i class="fa fa fa-vcard fa fa-fw"></i></a>&nbsp;role
 				manage</li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li3-li"><a href="admin_view_addRole" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;添加角色</a></li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li3-li"><a href="roleAction_getRoles" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除角色</a></li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li3-li"><a href="roleAction_getRoles" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新角色</a></li>
 			<li id="li4"><a href=""><i
 					class="fa fa fa-bar-chart fa fa-fw"></i></a>&nbsp;message</li>
