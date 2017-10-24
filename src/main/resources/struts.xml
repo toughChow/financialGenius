@@ -4,6 +4,20 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	<package name="ajaxPackage" extends="json-default">
+		<action name="adminValidatePwd" class="ajaxAdminAction" method="validatePwd">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action name="AjaxAdminAction_*" class="ajaxUserAction" method="{1}">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+	
+	</package>
+
 	<package name="adminPackage" extends="struts-default">
 		<!-- 自定义拦截器 -->
 		<interceptors>

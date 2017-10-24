@@ -21,5 +21,12 @@ public interface UserDao {
 	 * @return
 	 */
 	public User getUserById(Long id);
+	
+	/**
+	 * 通过用户名查找该用户是否存在
+	 * @param username
+	 * @return User对象
+	 */
+	public List<User> getUserByName(String username);
 
 }

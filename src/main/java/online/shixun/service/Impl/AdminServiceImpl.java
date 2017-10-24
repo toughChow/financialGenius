@@ -17,7 +17,7 @@ public class AdminServiceImpl implements AdminService {
 	private AdminDaoImpl adminDao;
 
 	/**
-	 * 不存在返回false 存在返回true
+	 * 错误false 用户名密码验证正确true
 	 */
 	public boolean login(Admin admin) {
 		List<Admin> admin2 = adminDao.getAdminByUserAndPassword(admin);

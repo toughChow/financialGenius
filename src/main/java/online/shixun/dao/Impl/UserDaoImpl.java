@@ -14,7 +14,7 @@ public class UserDaoImpl implements UserDao {
 	@Autowired
 	private BaseDao baseDao;
 	private List<User> list;
-	
+
 	public List<User> getList() {
 		return list;
 	}
@@ -27,13 +27,16 @@ public class UserDaoImpl implements UserDao {
 	public List<User> findUsers() {
 		return (List<User>) baseDao.getHibernateTemplate().find("from User");
 	}
-	public void saveUser(User user){
+
+	public void saveUser(User user) {
 		baseDao.getHibernateTemplate().save(user);
 	}
-	public void deleteUser(User user){
+
+	public void deleteUser(User user) {
 		baseDao.getHibernateTemplate().delete(user);
 	}
-	public void updateUser(User user){
+
+	public void updateUser(User user) {
 		baseDao.getHibernateTemplate().update(user);
 	}
 
@@ -44,5 +47,13 @@ public class UserDaoImpl implements UserDao {
 	public User getUserById(Long id) {
 		User user = baseDao.getHibernateTemplate().get(User.class, id);
 		return user;
+	}
+
+	public List<User> getUserByName(String username) {
+		String hql = "From User u where u.userName=:myUsername";
+		String paramName = "myUsername";
+		@SuppressWarnings("unchecked")
+		List<User> list = (List<User>) baseDao.getHibernateTemplate().findByNamedParam(hql, paramName, username);
+		return list;
 	}
 }

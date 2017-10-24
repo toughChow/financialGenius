@@ -21,5 +21,12 @@ public interface UserService {
 	 * @return
 	 */
 	public User getUserById(Long id);
+	
+	/**
+	 * 通过用户名查找该用户名是否存在
+	 * @param username
+	 * @return
+	 */
+	public boolean getUserByName(String username);
 
 }

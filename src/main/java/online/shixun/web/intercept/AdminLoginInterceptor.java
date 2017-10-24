@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 
-import online.shixun.model.Admin;
-
 @Component
 public class AdminLoginInterceptor extends MethodFilterInterceptor{
 
