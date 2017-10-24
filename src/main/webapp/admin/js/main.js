@@ -31,6 +31,5 @@
 				document.getElementById("password").focus();
 				return false;
 			}
-			alert("登录成功！");
 			return true;
 		}

@@ -22,17 +22,17 @@
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a>
-					<select class="section"
-						style="width: 70px; border: 0px; background-color: #845636;color:white;">
-						<option>${username }</option>
-						<option><a href="login.jsp">修改密码</a></option>
-						<option><a href="login.jsp">退出</a></option>
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
+					class="section"
+					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					<option>${username}</option>
+					<option><a href="login.jsp">修改密码</a></option>
+					<option><a href="login.jsp">退出</a></option>
 				</select>
 			</div>
 		</div>
 
-				<div class="left">
+		<div class="left">
 			<a href="admin_view_main"><li id="li5"><i
 					class="fa fa fa-envira fa-fw"></i>&nbsp;HOME</li></a>
 			<li id="li1"><a href=""><i class="fa fa fa-user fa fa-fw"></i></a>&nbsp;user

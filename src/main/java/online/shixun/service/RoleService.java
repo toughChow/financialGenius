@@ -9,5 +9,6 @@ public interface RoleService {
 	public void deleteRole(Role role);
 	public void saveRole(Role role);
 	public void updateRole(Role role);
+	public boolean findRole(Role role);
 
 }

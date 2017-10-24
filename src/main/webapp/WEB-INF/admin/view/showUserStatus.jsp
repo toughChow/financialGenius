@@ -8,9 +8,9 @@
 <title>status</title>
 <script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="admin/js/main.js"></script>
-<script type="text/javascript" src="admin/js/timer.js"></script>
 <link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="admin/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="admin/css/main.css">
 <link rel="stylesheet" type="text/css" href="admin/css/usermanage.css">
 </head>
@@ -22,12 +22,12 @@
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a>
-					<select class="section"
-						style="width: 70px; border: 0px; background-color: #845636;color:white;">
-						<option>${username }</option>
-						<option><a href="login.jsp">修改密码</a></option>
-						<option><a href="login.jsp">退出</a></option>
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
+					class="section"
+					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					<option>${username}</option>
+					<option><a href="login.jsp">修改密码</a></option>
+					<option><a href="login.jsp">退出</a></option>
 				</select>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 		<div class="right">
 			<div class="right-head">
 				<div class="head-left">当前位置：用户状态统计</div>
-				<div class="head-right"><b id="mytimer"></b></div>
+				<div class="head-right">今天是2017年10月17日 星期二</div>
 			</div>
 			<div class="head-bottom">
 				<div class="query">

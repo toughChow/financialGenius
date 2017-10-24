@@ -25,7 +25,7 @@
 					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
 					class="section"
 					style="width: 70px; border: 0px; background-color: #845636;color:white;">
-					<option>${username }</option>
+					<option>${username}</option>
 					<option><a href="login.jsp">修改密码</a></option>
 					<option><a href="login.jsp">退出</a></option>
 				</select>
@@ -88,6 +88,7 @@
 							<a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 								type="text" name="roleName" id="name" placeholder="请输入角色名！"
 								class="input">
+								<b id="mes" style="font-size: 16px;"></b>
 						</p>
 						<p>
 							<a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
@@ -108,5 +109,48 @@
 			</div>
 		</div>
 	</div>
+		<script type="text/javascript">
+		function register(){
+			if(document.getElementById("name").value.length==0){
+				alert("项目名不能为空!");
+				document.getElementById("name").focus();
+				return false;
+			}else if(document.getElementById("password").value.length==0){
+				alert("金额不能为空!");
+				document.getElementById("password").focus();
+				return false;
+			}else if(document.getElementById("againpass").value.length==0){
+				alert("描述不能为空!");
+				document.getElementById("againpass").focus();
+				return false;
+			}
+			return true;
+		}
+		$(function() {
+
+			$("#name").blur(function() {
+				var username = $("#name").val();
+				var content = {
+					"roleName" : username
+				};
+				$.ajax({
+					type : "post",
+					url : "addRoleCheckUsername",
+					data : content,
+					dataType : "json",
+					success : function(data) {
+						if (data.success) {
+							$('#mes').html("该名称已存在").css('color', 'red');
+							$('#name').val(null);
+						} else
+							$('#mes').html("该名称可以使用").css('color', 'green');
+					},
+					error : function() {
+						alert("请求失败");
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

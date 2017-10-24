@@ -8,6 +8,7 @@
 <script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="admin/js/main.js"></script>
 <script type="text/javascript" src="admin/js/timer.js"></script>
+<script type="text/javascript" src="admin/js/register.js"></script>
 <link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css"
 	href="admin/css/font-awesome.min.css" />
@@ -22,12 +23,12 @@
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a>
-					<select class="section"
-						style="width: 70px; border: 0px; background-color: #845636;color:white;">
-						<option>${username }</option>
-						<option><a href="login.jsp">修改密码</a></option>
-						<option><a href="login.jsp">退出</a></option>
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
+					class="section"
+					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					<option>${username}</option>
+					<option><a href="login.jsp">修改密码</a></option>
+					<option><a href="login.jsp">退出</a></option>
 				</select>
 			</div>
 		</div>
@@ -87,7 +88,8 @@
 						<p>
 							<a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 								type="text" name="investment.investName" id="name"
-								placeholder="请输入项目名！" class="input">
+								placeholder="请输入项目名！" class="input"><b id="mes"
+								style="font-size: 16px;"></b>
 						</p>
 						<p>
 							<a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
@@ -108,5 +110,38 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(function() {
+/* 			function register(){
+				if($("#name").val()==null||$("#password").val()==null||$("#againpass").val()==null){
+					alert("请填写完整信息");
+					return false;
+				}
+			} */
+			$("#name").blur(function() {
+				var username = $("#name").val();
+				var content = {
+					"investName" : username
+				};
+				$.ajax({
+					type : "post",
+					url : "addCheckUsername",
+					data : content,
+					dataType : "json",
+					success : function(data) {
+						if (data.success) {
+							$('#mes').html("该名称已存在").css('color', 'red');
+							$('#name').val(null);
+						} else
+							$('#mes').html("该名称可以使用").css('color', 'green');
+					},
+					error : function() {
+						alert("请求失败");
+					}
+				});
+			});
+		});
+	</script>
+
 </body>
 </html>
