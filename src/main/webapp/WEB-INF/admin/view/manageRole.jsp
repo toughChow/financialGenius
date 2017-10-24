@@ -57,15 +57,17 @@
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新角色</a></li>
 			<li id="li4"><a href=""><i
 					class="fa fa fa-bar-chart fa fa-fw"></i></a>&nbsp;message</li>
-			<li class="li4-li"><a href="" id="a"><i
+			<li class="li4-li"><a href="admin_view_onlineUser" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;在线人数统计</a></li>
-			<li class="li4-li"><a href="" id="a"><i
+			<li class="li4-li"><a href="userAction_showUsersStatus" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;用户状态统计</a></li>
 		</div>
 		<div class="right">
 			<div class="right-head">
 				<div class="head-left">当前位置：角色管理</div>
-				<div class="head-right"><b id="mytimer"></b></div>
+				<div class="head-right">
+					<b id="mytimer"></b>
+				</div>
 			</div>
 			<div class="head-bottom">
 				<div class="query">

@@ -38,21 +38,25 @@
 			<li class="li1-li"><a href="userAction_findUsers" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新用户</a></li>
 			<!-- <li id="li5">用户添加</li> -->
-            <li id="li2"><a href=""><i class="fa fa fa-money fa fa-fw"></i></a>&nbsp;project manage</li>
-				<li class="li2-li"><a href="admin_view_addFinancing" id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;添加投资项目</a></li>
-				<li class="li2-li"><a href="investmentAction_findInvestments" id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除投资项目</a></li>
-				<li class="li2-li"><a href="investmentAction_findInvestments" id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新投资项目</a></li>
-            <li id="li3"><a href=""><i class="fa fa fa-vcard fa fa-fw"></i></a>&nbsp;role
+			<li id="li2"><a href=""><i class="fa fa fa-money fa fa-fw"></i></a>&nbsp;project
 				manage</li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li2-li"><a href="admin_view_addFinancing" id="a"><i
+					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;添加投资项目</a></li>
+			<li class="li2-li"><a href="investmentAction_findInvestments"
+				id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除投资项目</a></li>
+			<li class="li2-li"><a href="investmentAction_findInvestments"
+				id="a"><i class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新投资项目</a></li>
+			<li id="li3"><a href=""><i class="fa fa fa-vcard fa fa-fw"></i></a>&nbsp;role
+				manage</li>
+			<li class="li3-li"><a href="admin_view_addRole" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;添加角色</a></li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li3-li"><a href="roleAction_getRoles" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除角色</a></li>
-			<li class="li3-li"><a href="" id="a"><i
+			<li class="li3-li"><a href="roleAction_getRoles" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新角色</a></li>
 			<li id="li4"><a href=""><i
 					class="fa fa fa-bar-chart fa fa-fw"></i></a>&nbsp;message</li>
-			<li class="li4-li"><a href="" id="a"><i
+			<li class="li4-li"><a href="admin_view_onlineUser" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;在线人数统计</a></li>
 			<li class="li4-li"><a href="userAction_showUsersStatus" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;用户状态统计</a></li>

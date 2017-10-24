@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="plugins/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="admin/js/timer.js"></script>
     <style type="text/css">
     li {
         list-style: none;
@@ -138,7 +139,7 @@
         <div class="top">
             <img src="images/logo.png">
             <div class="top-middle">
-                欢迎您，admin
+                欢迎您，${username }
             </div>
             <div class="top-right">
                 <a href="#">帮助</a>
@@ -169,7 +170,7 @@
                     当前位置：角色管理>添加角色
                 </div>
                 <div class="head-right">
-                    今天是2017年10月17日 星期二
+                    <b id="mytimer"></b>
                 </div>
                 <!--  主体  -->
                 <div id="center-main">
