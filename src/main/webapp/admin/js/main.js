@@ -31,4 +31,5 @@
 				document.getElementById("password").focus();
 				return false;
 			}
-		}
+			return true;
+	    }

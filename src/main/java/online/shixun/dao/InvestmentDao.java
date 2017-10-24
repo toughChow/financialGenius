@@ -36,4 +36,6 @@ public interface InvestmentDao {
 	 * @param investment
 	 */
 	public void updateInvestment(Investment investment);
+	//判断是否存在该名字
+	public List<Investment> findInvestment(Investment investment);
 }

@@ -73,6 +73,22 @@
 			<result name="update">/WEB-INF/admin/view/manageRole.jsp</result>
 			<result name="delete">/WEB-INF/admin/view/manageRole.jsp</result>
 			<result name="toUpdate">/WEB-INF/admin/view/updateRole.jsp</result>
+
+		</action>
+	</package>
+	<package name="strutsjson" extends="json-default">
+		<action name="addCheckUsername" class="ajaxInvestmentAction"
+			method="addCheckUsername">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action name="addRoleCheckUsername" class="ajaxRoleAction"
+			method="addRoleCheckUsername">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+
 		</action>
 	</package>
 </struts>

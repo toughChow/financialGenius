@@ -1,31 +1,19 @@
 function register(){
-	var name=document.getElementById('name').value;
-	var password=document.getElementById("password").value;
-	var againpass=document.getElementById("againpass").value;
-	var email=document.getElementById("email").value;
-	if(name==""){
-		alert("用户名称不能为空！");
+	if(document.getElementById("name").value.length==0){
+		alert("项目名不能为空!");
+		document.getElementById("name").focus();
 		return false;
-	}else if(password==""){
-		alert("登录密码不能为空！");
+	}else if(document.getElementById("password").value.length==0){
+		alert("金额不能为空!");
+		document.getElementById("password").focus();
 		return false;
-	}else if(againpass==""){
-		alert("重复密码不能为空！");
+	}else if(document.getElementById("againpass").value.length==0){
+		alert("描述不能为空!");
+		document.getElementById("againpass").focus();
 		return false;
-	}else if(email==""){
-		alert("email不能为空！");
-		return false;
-	}else if(name.length<6||name.length>20){
-		alert("用户名长度必须在6-20个字符之间！");
-		return false;
-	}else if(password.length<6||password.length>20){
-		alert("密码长度必须在6-20个字符之间！");
-		return false;
-	}else if(againpass.length<6||againpass.length>20){
-		alert("重复密码长度必须在6-20个字符之间！");
-		return false;
-	}else if(password!=againpass){
-		alert("密码和重复密码必须相等！");
+	}else if(typeof (document.getElementById("password").value)!='number'){
+		alert("金额必须输入数字");
 		return false;
 	}
+	return true;
 }

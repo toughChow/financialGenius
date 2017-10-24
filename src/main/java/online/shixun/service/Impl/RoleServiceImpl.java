@@ -33,5 +33,11 @@ public class RoleServiceImpl implements RoleService {
 		roleDaoImpl.updateRole(role);
 
 	}
-
+	public boolean findRole(Role role){
+		List<Role> list=roleDaoImpl.findRole(role);
+		if(list.size()>0){
+			return true;
+		}
+		return false;
+	}
 }

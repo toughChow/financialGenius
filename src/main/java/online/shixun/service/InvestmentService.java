@@ -35,4 +35,5 @@ public interface InvestmentService {
 	 * @param investment
 	 */
 	public void updateInvestment(Investment investment);
+	public boolean findInvestment(Investment investment);
 }

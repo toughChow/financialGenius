@@ -22,14 +22,21 @@
 			<div class="head2">
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
-				<a href="">设置</a>&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-					href=""><i class="fa fa fa-user fa-2x fa-fw"></i>${username }</a>
+
+				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
+					class="section"
+					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					<option>${username}</option>
+					<option><a href="login.jsp">修改密码</a></option>
+					<option><a href="login.jsp">退出</a></option>
+				</select>
 			</div>
 		</div>
 
-				<div class="left">
-			<li id="li5"><a href="admin_view_main"><i
-					class="fa fa fa-envira fa-fw"></i></a>&nbsp;HOME</li>
+		<div class="left">
+			<a href="admin_view_main"><li id="li5"><i
+					class="fa fa fa-envira fa-fw"></i>&nbsp;HOME</li></a>
 			<li id="li1"><a href=""><i class="fa fa fa-user fa fa-fw"></i></a>&nbsp;user
 				manage</li>
 			<li class="li1-li"><a href="admin_view_addUser" id="a"><i
@@ -95,11 +102,14 @@
 						<td>${invest.description }</td>
 						<td><button
 								style="background-color: #628B4D; border: 0; border-radius: 10%;">
-								<a href="investmentAction_updateInvestment?investment.id=${invest.id }"><i class="fa fa-pencil"></i></a>
+								<a
+									href="investmentAction_updateInvestment?investment.id=${invest.id }"><i
+									class="fa fa-pencil"></i></a>
 							</button></td>
 						<td><button
 								style="background-color: #A65445; border: 0; border-radius: 10%;">
-								<a href="investmentAction_deleteInvestment?investment.id=${invest.id }"><i class="fa fa-times"></i></a>
+								<a href="investmentAction_deleteInvestment?investment.id=${invest.id }"><i
+									class="fa fa-times"></i></a>
 							</button></td>
 					</tr>
 				</c:forEach>

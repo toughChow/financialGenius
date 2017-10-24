@@ -37,6 +37,7 @@
 							me</label></li>
 					<li><input type="submit" name="submit" id="submit" value="登录">
 						<input type="reset" name="reset" id="reset" value="重置"></li>
+
 				</form>
 			</div>
 		</div>

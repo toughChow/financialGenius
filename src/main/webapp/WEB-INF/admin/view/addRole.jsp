@@ -20,14 +20,23 @@
 				ADMIN
 			</div>
 			<div class="head2">
-				<input type="text" name="text" value="search..." id="input1"><a href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
-				<a href="">设置</a>&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa fa-user fa-2x fa-fw"></i>${username }</a>
+
+				<input type="text" name="text" value="search..." id="input1"><a
+					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
+					class="section"
+					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					<option>${username}</option>
+					<option><a href="login.jsp">修改密码</a></option>
+					<option><a href="login.jsp">退出</a></option>
+				</select>
 			</div>
 		</div>
 		
 				<div class="left">
-			<li id="li5"><a href="admin_view_main"><i
-					class="fa fa fa-envira fa-fw"></i></a>&nbsp;HOME</li>
+			<a href="admin_view_main"><li id="li5"><i
+					class="fa fa fa-envira fa-fw"></i>&nbsp;HOME</li></a>
 			<li id="li1"><a href=""><i class="fa fa fa-user fa fa-fw"></i></a>&nbsp;user
 				manage</li>
 			<li class="li1-li"><a href="admin_view_addUser" id="a"><i
@@ -79,15 +88,75 @@
 				<br>
 				<br>
 				<div class="form">
-					<form action="roleAction_saveRole" method="post" name="form" onsubmit="return register()">
-						<p><a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="roleName" id="name" placeholder="请输入角色名！" class="input"></p>
-						<p><a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="permission" id="password" placeholder="请输入角色权限！" class="input"></p>
-						<p><a href=""><i class="fa fa-envelope-o fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="description" id="againpass" placeholder="请输入角色描述！" class="input"></p>
-						<p><input type="submit" name="submit" value="确定" id="submit"><input type="reset" name="reset" id="reset" value="重置"></p>
+					<form action="roleAction_saveRole" method="post" name="form"
+						onsubmit="return register()">
+						<p>
+							<a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="text" name="roleName" id="name" placeholder="请输入角色名！"
+								class="input">
+								<b id="mes" style="font-size: 16px;"></b>
+						</p>
+						<p>
+							<a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="text" name="permission" id="password"
+								placeholder="请输入角色权限！" class="input">
+						</p>
+						<p>
+							<a href=""><i class="fa fa-envelope-o fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="text" name="description" id="againpass"
+								placeholder="请输入角色描述！" class="input">
+						</p>
+						<p>
+							<input type="submit" name="submit" value="确定" id="submit"><input
+								type="reset" name="reset" id="reset" value="重置">
+						</p>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+		<script type="text/javascript">
+		function register(){
+			if(document.getElementById("name").value.length==0){
+				alert("项目名不能为空!");
+				document.getElementById("name").focus();
+				return false;
+			}else if(document.getElementById("password").value.length==0){
+				alert("金额不能为空!");
+				document.getElementById("password").focus();
+				return false;
+			}else if(document.getElementById("againpass").value.length==0){
+				alert("描述不能为空!");
+				document.getElementById("againpass").focus();
+				return false;
+			}
+			return true;
+		}
+		$(function() {
+
+			$("#name").blur(function() {
+				var username = $("#name").val();
+				var content = {
+					"roleName" : username
+				};
+				$.ajax({
+					type : "post",
+					url : "addRoleCheckUsername",
+					data : content,
+					dataType : "json",
+					success : function(data) {
+						if (data.success) {
+							$('#mes').html("该名称已存在").css('color', 'red');
+							$('#name').val(null);
+						} else
+							$('#mes').html("该名称可以使用").css('color', 'green');
+					},
+					error : function() {
+						alert("请求失败");
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

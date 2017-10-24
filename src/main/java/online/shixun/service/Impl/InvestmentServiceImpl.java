@@ -36,5 +36,12 @@ public class InvestmentServiceImpl implements InvestmentService{
 	public void updateInvestment(Investment investment) {
 		investmentDao.updateInvestment(investment);
 	}
+	public boolean findInvestment(Investment investment){
+		List<Investment> list=investmentDao.findInvestment(investment);
+		if(list.size()>0){
+			return true;
+		}
+		return false;
+	}
 	
 }

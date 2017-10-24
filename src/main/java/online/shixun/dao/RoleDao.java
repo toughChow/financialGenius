@@ -9,5 +9,5 @@ public interface RoleDao {
 	public void deleteRole(Role role);
 	public void saveRole(Role role);
 	public void updateRole(Role role);
-
+	public List<Role> findRole(Role role);
 }

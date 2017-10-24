@@ -39,5 +39,11 @@ public class InvestmentDaoImpl implements InvestmentDao{
 	public void updateInvestment(Investment investment) {
 		baseDao.getHibernateTemplate().update(investment);
 	}
+	@SuppressWarnings("unchecked")
+	public List<Investment> findInvestment(Investment investment){
+		String param[]={"investName"};
+		String value[]={investment.getInvestName()};
+		return (List<Investment>) baseDao.getHibernateTemplate().findByNamedParam("from Investment where investName=:investName", param, value);
+	}
 
 }

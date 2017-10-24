@@ -41,4 +41,10 @@ public class RoleDaoImpl implements RoleDao {
 	public void setList(List<Role> list) {
 		this.list = list;
 	}
+	@SuppressWarnings("unchecked")
+	public List<Role> findRole(Role role){
+		String param[]={"roleName"};
+		String value[]={role.getRoleName()};
+		return (List<Role>) baseDao.getHibernateTemplate().findByNamedParam("from Role where roleName=:roleName", param, value);
+	}
 }
