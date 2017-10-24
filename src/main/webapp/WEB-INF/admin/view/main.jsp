@@ -21,6 +21,7 @@
 			<div class="head2">
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
+
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
 					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
 					class="section"

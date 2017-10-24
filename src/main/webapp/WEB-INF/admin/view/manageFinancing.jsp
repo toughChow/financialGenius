@@ -22,6 +22,7 @@
 			<div class="head2">
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
+
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
 					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
 					class="section"
@@ -107,8 +108,7 @@
 							</button></td>
 						<td><button
 								style="background-color: #A65445; border: 0; border-radius: 10%;">
-								<a
-									href="investmentAction_deleteInvestment?investment.id=${invest.id }"><i
+								<a href="investmentAction_deleteInvestment?investment.id=${invest.id }"><i
 									class="fa fa-times"></i></a>
 							</button></td>
 					</tr>

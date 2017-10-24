@@ -1,24 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="admin/js/main.js"></script>
-<script type="text/javascript" src="admin/js/timer.js"></script>
-<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css"
-	href="admin/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="admin/css/main.css">
-<link rel="stylesheet" type="text/css" href="admin/css/useradd.css">
+	<script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="admin/js/main.js"></script>
+	<script type="text/javascript" src="admin/js/timer.js"></script>
+	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="admin/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="admin/css/main.css">
+	<link rel="stylesheet" type="text/css" href="admin/css/useradd.css">
 </head>
 <body>
 	<div class="main">
 		<div class="head">
-			<div class="head1">ADMIN</div>
+			<div class="head1">
+				ADMIN
+			</div>
 			<div class="head2">
+
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
@@ -31,8 +33,8 @@
 				</select>
 			</div>
 		</div>
-
-		<div class="left">
+		
+				<div class="left">
 			<a href="admin_view_main"><li id="li5"><i
 					class="fa fa fa-envira fa-fw"></i>&nbsp;HOME</li></a>
 			<li id="li1"><a href=""><i class="fa fa fa-user fa fa-fw"></i></a>&nbsp;user
@@ -69,7 +71,9 @@
 		</div>
 		<div class="right">
 			<div class="right-head">
-				<div class="head-left">当前位置：添加角色</div>
+				<div class="head-left">
+					当前位置：添加角色
+				</div>
 				<div class="head-right">
 					<b id="mytimer"></b>
 				</div>
@@ -80,7 +84,9 @@
 						<a href=""><i class="fa fa-list"></i></a>&nbsp;&nbsp;role add
 					</div>
 				</div>
-				<br> <br> <br>
+				<br>
+				<br>
+				<br>
 				<div class="form">
 					<form action="roleAction_saveRole" method="post" name="form"
 						onsubmit="return register()">

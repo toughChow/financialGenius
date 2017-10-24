@@ -112,12 +112,7 @@
 	</div>
 	<script type="text/javascript">
 		$(function() {
-/* 			function register(){
-				if($("#name").val()==null||$("#password").val()==null||$("#againpass").val()==null){
-					alert("请填写完整信息");
-					return false;
-				}
-			} */
+
 			$("#name").blur(function() {
 				var username = $("#name").val();
 				var content = {
