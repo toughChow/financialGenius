@@ -108,3 +108,14 @@
 			height: 30px;
       		background-color: #BB614B;
 		}
+		
+		.loginFormTdIpt{
+            background-color: #5E413C;
+            border: 1px solid grey;
+			width: 230px;
+			height: 30px;
+		}
+		
+		.validateCode{
+		margin-top:-10px;
+		}

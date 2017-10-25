@@ -11,6 +11,7 @@ public class testVeryfiCode {
 		ValidateCode validateCode = new ValidateCode();
 		validateCode.createCode();
 		String code = validateCode.getCode();
+		validateCode.getBuffImg();
 		System.out.println(code);
 	}
 

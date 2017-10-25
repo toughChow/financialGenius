@@ -10,6 +10,11 @@
 				<param name="root">dataMap</param>
 			</result>
 		</action>
+		<action name="adminValidateNum" class="ajaxAdminAction" method="validateNum">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
 		<action name="AjaxAdminAction_*" class="ajaxUserAction" method="{1}">
 			<result type="json">
 				<param name="root">dataMap</param>
