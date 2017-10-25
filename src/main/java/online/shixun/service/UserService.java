@@ -2,6 +2,7 @@ package online.shixun.service;
 
 import java.util.List;
 
+import online.shixun.model.PageBean;
 import online.shixun.model.User;
 
 public interface UserService {
@@ -28,5 +29,8 @@ public interface UserService {
 	 * @return
 	 */
 	public boolean getUserByName(String username);
+	
+	public PageBean queryForPage(int i, int page);
+	
 
 }

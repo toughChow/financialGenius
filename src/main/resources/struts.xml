@@ -57,6 +57,7 @@
 			<result name="list">/WEB-INF/admin/view/manageUser.jsp</result>
 			<result name="singleUser">/WEB-INF/admin/view/updateUser.jsp</result>
 			<result name="showStatus">/WEB-INF/admin/view/showUserStatus.jsp</result>
+			<result name="newsList">/WEB-INF/admin/view/manageUser.jsp</result>
 		</action>
 
 		<action name="investmentAction_*" class="investmentAction"
