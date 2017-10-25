@@ -2,7 +2,11 @@ package online.shixun.dao.Impl;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import online.shixun.dao.BaseDao;
@@ -10,7 +14,7 @@ import online.shixun.dao.UserDao;
 import online.shixun.model.User;
 
 @Repository("userDao")
-public class UserDaoImpl implements UserDao {
+public class UserDaoImpl<T> implements UserDao {
 	@Autowired
 	private BaseDao baseDao;
 	private List<User> list;
@@ -55,5 +59,25 @@ public class UserDaoImpl implements UserDao {
 		@SuppressWarnings("unchecked")
 		List<User> list = (List<User>) baseDao.getHibernateTemplate().findByNamedParam(hql, paramName, username);
 		return list;
+	}
+
+	public int getCount() {
+		String hql = "select count(*) from User";
+		@SuppressWarnings("unchecked")
+		List<Long> count = (List<Long>) baseDao.getHibernateTemplate().find(hql);
+		int count1 = count.size() > 0 ? (count.get(0).intValue()) : 0;
+		return count1;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<User> queryForPage(String string, int offset, int length) {
+		return (List<User>) baseDao.getHibernateTemplate().execute(new HibernateCallback<Object>() {
+			public Object doInHibernate(Session session) throws HibernateException{
+				Criteria criteria = session.createCriteria(User.class);
+                criteria.setFirstResult(offset);
+                criteria.setMaxResults(length);
+				return criteria.list();
+			}
+		});
 	}
 }

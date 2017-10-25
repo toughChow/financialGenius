@@ -28,5 +28,9 @@ public interface UserDao {
 	 * @return User对象
 	 */
 	public List<User> getUserByName(String username);
+	
+	public int getCount();
+	
+	public List<User> queryForPage(String string, int offset, int length);
 
 }

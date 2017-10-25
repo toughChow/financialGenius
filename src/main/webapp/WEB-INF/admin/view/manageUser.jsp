@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -33,7 +34,6 @@
 				</select>
 			</div>
 		</div>
-
 		<div class="left">
 			<a href="admin_view_main"><li id="li5"><i
 					class="fa fa fa-envira fa-fw"></i>&nbsp;HOME</li></a>
@@ -41,9 +41,9 @@
 				manage</li>
 			<li class="li1-li"><a href="admin_view_addUser" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;添加用户</a></li>
-			<li class="li1-li"><a href="userAction_findUsers" id="a"><i
+			<li class="li1-li"><a href="userAction_getPageList" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;删除用户</a></li>
-			<li class="li1-li"><a href="userAction_findUsers" id="a"><i
+			<li class="li1-li"><a href="userAction_getPageList" id="a"><i
 					class="fa fa-angle-right fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;更新用户</a></li>
 			<!-- <li id="li5">用户添加</li> -->
 			<li id="li2"><a href=""><i class="fa fa fa-money fa fa-fw"></i></a>&nbsp;project
@@ -86,13 +86,15 @@
 			</div>
 			<table>
 				<thead>
-					<th>用户名</th>
-					<th>性别</th>
-					<th>email</th>
-					<th>狀態</th>
-					<th colspan="2">操作</th>
+					<tr>
+						<th>用户名</th>
+						<th>性别</th>
+						<th>email</th>
+						<th>狀態</th>
+						<th colspan="2">操作</th>
+					</tr>
 				</thead>
-				<c:forEach items="${list }" var="user">
+				<c:forEach items="${pageBean.list }" var="user">
 					<tr>
 						<td>${user.userName }</td>
 						<td>${user.sex }</td>
@@ -110,6 +112,21 @@
 							</button></td>
 					</tr>
 				</c:forEach>
+				<!-- 分页 -->
+				<tr>
+					<td colspan="6"><s:if test="%{pageBean.currentPage == 1}">第一页&nbsp;&nbsp;&nbsp;&nbsp;上一页&nbsp;&nbsp;&nbsp;&nbsp;</s:if>
+
+						<s:else>
+							<a href="userAction_getPageList?page=1">第一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<a
+								href="userAction_getPageList?page=<s:property value="%{pageBean.currentPage-1}"/>">上一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</s:else> <s:if test="%{pageBean.currentPage != pageBean.totalPage}">
+							<a
+								href="userAction_getPageList?page=<s:property value="%{pageBean.currentPage+1}"/>">下一页&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<a
+								href="userAction_getPageList?page=<s:property value="pageBean.totalPage"/>">最后一页</a>
+						</s:if> <s:else>下一页&nbsp;&nbsp;&nbsp;&nbsp; 最后一页</s:else></td>
+				</tr>
 			</table>
 		</div>
 	</div>
