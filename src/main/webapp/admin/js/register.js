@@ -11,9 +11,13 @@ function register(){
 		alert("描述不能为空!");
 		document.getElementById("againpass").focus();
 		return false;
-	}else if(typeof (document.getElementById("password").value)!='number'){
+	}else if(!IsNum(document.getElementById("password").value)){
 		alert("金额必须输入数字");
 		return false;
 	}
 	return true;
+}
+function IsNum(num){
+	 var reNum=/^\d*$/;
+	 return(reNum.test(num));
 }

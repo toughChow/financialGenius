@@ -47,6 +47,7 @@
 
 		<action name="adminAction_*" class="adminAction" method="{1}">
 			<result name="success">/WEB-INF/admin/view/main.jsp</result>
+			<result name="update">adminAction_adminExit</result>
 			<result name="login">login.jsp</result>
 			<result name="jumpToAddAdmin">/WEB-INF/admin/view/addAdmin.jsp</result>
 		</action>
@@ -88,7 +89,12 @@
 			<result type="json">
 				<param name="root">dataMap</param>
 			</result>
-
+		</action>
+		<action name="adminCheckPassword" class="adminAction"
+			method="adminCheckPassword">
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
 		</action>
 	</package>
 </struts>

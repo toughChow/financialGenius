@@ -1,6 +1,7 @@
 package online.shixun.action;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -56,8 +57,15 @@ public class AjaxAdminAction extends ActionSupport {
 		admin.setPassword(password);
 
 		dataMap = new HashMap<>();
-		boolean flag = adminService.login(admin);
-		if (flag == true) {
+		List<Admin> admin1=adminService.login(admin);
+		boolean flag=false;
+		if(admin1!=null){
+			flag=true;
+		}else{
+			flag=false;
+		}
+		System.out.println(false);
+		if (flag) {
 			dataMap.put("message", flag);
 		} else {
 			dataMap.put("message", flag);

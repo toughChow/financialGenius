@@ -29,5 +29,14 @@ public class AdminDaoImpl implements AdminDao {
 		Serializable save = baseDao.getHibernateTemplate().save(admin);
 		System.out.println(save);
 	}
+	@SuppressWarnings("unchecked")
+	public List<Admin> getAdminByUser(Admin admin){
+		String param[]={"username"};
+		String value[]={admin.getUsername()};
+		return (List<Admin>)baseDao.getHibernateTemplate().findByNamedParam("from Admin where username=:username", param, value);
+	}
+	public void updateAdmin(Admin admin){
+		baseDao.getHibernateTemplate().update(admin);
+	}
 
 }

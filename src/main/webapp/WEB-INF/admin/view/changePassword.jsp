@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>licaiupdate</title>
 <script type="text/javascript" src="admin/plugins/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="admin/js/main.js"></script>
 <script type="text/javascript" src="admin/js/timer.js"></script>
@@ -13,7 +12,7 @@
 <link rel="stylesheet" type="text/css"
 	href="admin/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="admin/css/main.css">
-<link rel="stylesheet" type="text/css" href="admin/css/usermanage.css">
+<link rel="stylesheet" type="text/css" href="admin/css/useradd.css">
 </head>
 <body>
 	<div class="main">
@@ -22,13 +21,12 @@
 			<div class="head2">
 				<input type="text" name="text" value="search..." id="input1"><a
 					href=""><i class="fa fa fa-search fa fa-fw"></i></a>&nbsp;&nbsp;&nbsp;
-
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
 					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
 					class="section"
 					style="width: 70px; border: 0px; background-color: #845636;color:white;" 
 					onchange="if(this.value!='')window.location.href=(this.value);this.options[0].selected=true">
-					<option>${username}</option>
+					<option>${username} ${id}</option>
 					<option value="admin_view_changePassword">修改密码</option>
 					<option value="adminAction_adminExit">退出</option>
 				</select>
@@ -72,7 +70,7 @@
 		</div>
 		<div class="right">
 			<div class="right-head">
-				<div class="head-left">当前位置：角色管理</div>
+				<div class="head-left">当前位置：修改密码</div>
 				<div class="head-right">
 					<b id="mytimer"></b>
 				</div>
@@ -80,40 +78,90 @@
 			<div class="head-bottom">
 				<div class="query">
 					<div class="head-left">
-						<a href=""><i class="fa fa-list"></i></a>&nbsp;&nbsp;role table
+						<a href=""><i class="fa fa-list"></i></a>&nbsp;&nbsp;licai update
 					</div>
-
+				</div>
+				<br> <br> <br>
+				<div class="form">
+					<form action="adminAction_updateAdmin?admin.id=${id }" method="post"
+						name="form" onsubmit="return register()">
+						<p>
+							<a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="password" name="passpwd" id="name"
+								placeholder="请输入原密码" class="input">
+								<b id="mes"
+								style="font-size: 16px;"></b>
+						</p>
+						<p>
+							<a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="password" name="newPassword" id="password"
+								placeholder="请输入新密码" class="input">
+						</p>
+						<p>
+							<a href=""><i class="fa fa-envelope-o fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+								type="password" name="againPassword" id="againpass"
+								placeholder="请再次输入新密码" class="input">
+						</p>
+						<p>
+							<input type="submit" name="submit" value="更新" id="submit"><input
+								type="reset" name="reset" id="reset" value="重置">
+						</p>
+					</form>
 				</div>
 			</div>
-			<table>
-				<thead>
-					<td>角色名</td>
-					<td>权限</td>
-					<td>描述</td>
-					<td colspan="2">操作</td>
-				</thead>
-				<c:forEach items="${list }" var="role">
-					<tr>
-
-						<td>${role.roleName }</td>
-						<td>${role.permission }</td>
-						<td>${role.description }</td>
-						<td><button
-								style="background-color: #628B4D; border: 0; border-radius: 10%;">
-								<a href="roleAction_toUpdate?role.id=${role.id }"><i
-									class="fa fa-pencil"></i>
-							</button></td>
-						<td><button
-								style="background-color: #A65445; border: 0; border-radius: 10%;">
-								<a href="roleAction_deleteRole?role.id=${role.id }"><i
-									class="fa fa-times"></i>
-							</button></td>
-
-					</tr>
-				</c:forEach>
-			</table>
 		</div>
 	</div>
-
+		<script type="text/javascript">
+		function register(){
+			if(document.getElementById("name").value.length==0){
+				alert("请输入原密码!");
+				document.getElementById("name").focus();
+				return false;
+			}else if(document.getElementById("password").value.length==0){
+				alert("请输入新密码!");
+				document.getElementById("password").focus();
+				return false;
+			}else if(document.getElementById("againpass").value.length==0){
+				alert("请再次输入新密码!");
+				document.getElementById("againpass").focus();
+				return false;
+			}else if(document.getElementById("password").value!=document.getElementById("againpass").value){
+				alert("两次输入的密码必须相同!");
+				document.getElementById("againpass").focus();
+				return false;
+			}
+			alert("密码修改成功！请重新登录");
+			return true;
+		}
+		$(function() {
+			
+			$("#name").blur(function() {
+				var username = $("#name").val();
+				var content = {
+					"password" : username
+				};
+				$.ajax({
+					type : "post",
+					url : "adminCheckPassword",
+					data : content,
+					dataType : "json",
+					success : function(data) {
+						if (data.success) {
+							$('#mes').html("密码正确").css('color', 'green');
+							
+						}else{
+					
+							$('#mes').html("密码错误").css('color', 'red');
+							$('#name').val(null);
+						}
+							
+						},
+					error : function() {
+						alert("请求失败");
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

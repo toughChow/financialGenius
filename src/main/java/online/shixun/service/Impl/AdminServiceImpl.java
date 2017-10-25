@@ -19,17 +19,17 @@ public class AdminServiceImpl implements AdminService {
 	/**
 	 * 错误false 用户名密码验证正确true
 	 */
-	public boolean login(Admin admin) {
+	public List<Admin> login(Admin admin) {
 		List<Admin> admin2 = adminDao.getAdminByUserAndPassword(admin);
-		if (admin2 == null)
-			return false;
-		else
-			return true;
+		return admin2;
+		
 	}
 
 	@Override
 	public void addAdmin(Admin admin) {
 		adminDao.addAdmin(admin);
 	}
-
+	public void updateAdmin(Admin admin){
+		adminDao.updateAdmin(admin);
+	}
 }

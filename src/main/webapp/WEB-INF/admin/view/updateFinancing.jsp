@@ -25,10 +25,11 @@
 				<a href="">设置</a>&nbsp;&nbsp;<a href="">帮助</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
 					href=""><i class="fa fa fa-user fa-2x fa-fw"></i></a> <select
 					class="section"
-					style="width: 70px; border: 0px; background-color: #845636;color:white;">
+					style="width: 70px; border: 0px; background-color: #845636; color: white;"
+					onchange="if(this.value!='')window.location.href=(this.value);this.options[0].selected=true">
 					<option>${username}</option>
-					<option><a href="login.jsp">修改密码</a></option>
-					<option><a href="login.jsp">退出</a></option>
+					<option value="admin_view_changePassword">修改密码</option>
+					<option value="adminAction_adminExit">退出</option>
 				</select>
 			</div>
 		</div>
@@ -88,9 +89,8 @@
 						<p>
 							<a href=""><i class="fa fa-user fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 								type="text" name="investment.investName" id="name"
-								placeholder="${investment.investName }" class="input">
-								<b id="mes"
-								style="font-size: 16px;"></b>
+								placeholder="${investment.investName }" class="input"> <b
+								id="mes" style="font-size: 16px;"></b>
 						</p>
 						<p>
 							<a href=""><i class="fa fa-rmb fa-fw"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
@@ -111,37 +111,36 @@
 			</div>
 		</div>
 	</div>
-		<script type="text/javascript">
+	<script type="text/javascript">
 		$(function() {
-			function register(){
-				if($("#name").val()==null||$("#password").val()==null||$("#againpass").val()==null){
-					alert("请填写完整信息");
-					return false;
-				}
-				return true;
-			}
-			$("#name").blur(function() {
-				var username = $("#name").val();
-				var content = {
-					"investName" : username
-				};
-				$.ajax({
-					type : "post",
-					url : "addCheckUsername",
-					data : content,
-					dataType : "json",
-					success : function(data) {
-						if (data.success) {
-							$('#mes').html("该名称已存在").css('color', 'red');
-							$('#name').val(null);
-						} else
-							$('#mes').html("该名称可以使用").css('color', 'green');
-					},
-					error : function() {
-						alert("请求失败");
-					}
-				});
-			});
+			$("#name").blur(
+					function() {
+						if ("${investment.investName}" != $("#name").val()) {
+							var username = $("#name").val();
+							var content = {
+								"investName" : username
+							};
+							$.ajax({
+								type : "post",
+								url : "addCheckUsername",
+								data : content,
+								dataType : "json",
+								success : function(data) {
+									if (data.success) {
+										$('#mes').html("该名称已存在").css('color',
+												'red');
+										$('#name').val(null);
+									} else
+										$('#mes').html("该名称可以使用").css('color',
+												'green');
+								},
+								error : function() {
+									alert("请求失败");
+								}
+							});
+						}
+					});
+
 		});
 	</script>
 </body>

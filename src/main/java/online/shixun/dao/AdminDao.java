@@ -13,4 +13,5 @@ public interface AdminDao {
 	 * 添加管理员
 	 */
 	public void addAdmin(Admin admin);
+	public void updateAdmin(Admin admin);
 }
